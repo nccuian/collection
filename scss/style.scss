@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+$yellow: #efd856;
+$black: #313233;
+$white: #f1f1f1;
+body {
+  margin: 0;
+  padding: 0;
+}
+.section {
+  background-color: #f3f3f3;
+  overflow: hidden;
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+  }
+}
+.section:nth-child(2n) {
+  background-color: #e8e8e8;
+}
+//about
+.pic-box {
+  max-width: 50%;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.info {
+  position: absolute;
+  width: 40%;
+  top: 30%;
+  right: 0;
+  text-align: center;
+  .name {
+    position: relative;
+    width: 100%;
+    margin-bottom: 5rem;
+    font-size: 3rem;
+    padding: 10px 40px;
+    background-color: $black;
+    color: $white;
+    font-weight: 300;
+    box-shadow: 10px 10px 20px rgba(0,0,0,.3);
+    font-family: 'Noto Sans TC', sans-serif;
+    &:after {
+      content:'Ian Tsai';
+      width: 40%;
+      background-color: $yellow;
+      color: $black;
+      position: absolute;
+      bottom: -40%;
+      right: -10%;
+      font-size: 1.5rem;
+      padding: 6px 20px;
+      box-shadow: 10px 10px 20px rgba(0,0,0,.3);
+    }
+  }
+  .box {
+    text-align: left;
+    width: 100%;
+    padding: 10px 0;
+    font-family: 'Lato', sans-serif;
+    .title {
+      font-weight: 600;
+      color: $yellow;
+      text-shadow: 2px 2px 3px rgba(0,0,0,.3);
+      margin: 10px 0;
+      padding: 5px 10px;
+      font-size: 1.5rem;
+    }
+    p {
+      margin: 0;
+      padding: 5px 10px;
+      font-weight: 300;
+    }
+  }
+}
+//skills
+h2 {
+  background-color: $black;
+  color: $white;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .col {
+    width: 300px;
+    margin-bottom: 3rem;
+    .card {
+      padding: 23px;
+      padding-left: 50px;
+      background-color: $white;
+      color: $black;
+      font-family: 'Noto Sans TC', sans-serif;
+      position: relative;
+      .icon {
+        font-size: 2rem;
+        padding: 10px 20px;
+        position: absolute;
+        border-radius: 50%;
+        background-color: $yellow;
+        top: -15%;
+        left: -9%;
+        text-align: center;
+      }
+      &:after {
+        content: '';
+        background-color: $yellow;
+        opacity: .8;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: -10px;
+        bottom: -10px;
+        z-index: -10;
+      }
+      .title {
+        font-weight: 900;
+        letter-spacing: 1.5px;
+      }
+      ul {
+        list-style: none;
+        padding-left: 0;
+        li {
+          letter-spacing: 1.5px;
+          font-weight: 300;
+          color: $black;
+        }
+      }
+    }
+  }
+
+  .work {
+    width: 100%;
+    max-width: 480px;
+    font-family: 'Noto Sans TC', sans-serif;
+    margin-bottom: 2rem;
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      &:hover {
+        .img-box {
+          opacity: .8;
+        }
+        .title {
+          transform: translateY(-100%);
+        }
+      }
+      .img-box {
+        width: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .title {
+        display: inline-block;
+        color: $black;
+        font-weight: 600;
+        font-size: 1.3rem;
+        position: absolute;
+        z-index: 10;
+        transition: .5s;
+        &:before {
+          content: '';
+          background-color: $yellow;
+          position: absolute;
+          padding: 10px 40px;
+          bottom: -5px;
+          right: -5px;
+          z-index: -5;
+        }
+      }
+    }
+    .intro {
+      text-align: center;
+      margin-top: 5rem;
+      color: $black;
+      border: 2px solid $black;
+      background-color: white;
+      padding: 0 20px;
+      position: relative;
+      &:before {
+        content: 'MAIN POINT';
+        font-weight: 600;
+        background-color: $black;
+        color: $white;
+        position: absolute;
+        right: -2px;
+        top: -35px;
+        padding: 5px 10px;
+      }
+      p {
+        border: 1px solid $yellow;
+        padding: 5px 10px;
+        font-weight: 600;
+        display: inline-block;
+        background-color: $yellow;
+      }
+      ul {
+        text-align: left;
+        list-style: none;
+        padding: 0;
+        li {
+          margin-bottom: 8px;
+          letter-spacing: 1.1px;
+        }
+      }
+    }
+  }
+}
+@media(max-width: 768px) {
+  .d-flex {
+    justify-content: space-around;
+    .col {
+      .card {
+        padding-top: 50px; 
+        .icon {
+          left: 50%;
+          top: -20%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}
+@media(max-width: 425px) {
+  #fp-nav {
+    display: none;
+  }
+  .info {
+    top: 0;
+    .name {
+      font-size: 1rem;
+      margin-bottom: 3.5rem;
+      &:after {
+        font-size: .7rem;
+        bottom: -100%;
+        right: 0;
+        left: 0;
+      }
+    }
+    .box {
+      .title {
+        margin: 5px 0;
+        font-size: .8rem;
+      }
+      p {
+        font-size: .8rem;
+      }
+    }
+  }
+}
+
+#fp-nav ul li .fp-tooltip {
+  color: $white;
+  background-color: $black;
+  padding: 2px 5px;
+}
