@@ -263,6 +263,24 @@ h2 {
   }
 }
 
+.github-code {
+  margin-top: .5rem;
+  text-align: center;
+  a {
+    .btn {
+      background-color: $black;
+      color: $white;
+      padding: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}
+
 #fp-nav ul li .fp-tooltip {
   color: $white;
   background-color: $black;

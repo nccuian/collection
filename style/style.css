@@ -301,6 +301,24 @@ h2 {
   }
 }
 
+.github-code {
+  margin-top: .5rem;
+  text-align: center;
+}
+
+.github-code a .btn {
+  background-color: #313233;
+  color: #f1f1f1;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.github-code a .btn:hover {
+  opacity: .8;
+}
+
 #fp-nav ul li .fp-tooltip {
   color: #f1f1f1;
   background-color: #313233;
